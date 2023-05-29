@@ -37,8 +37,8 @@ for (let i = 0; i < teamMembers.length; i++) {
     const teamMemberCard = addElement('div', '', container);
     teamMemberCard.classList.add('card');
     addElement('img', '', teamMemberCard).src = 'img/' + teamMembers[i].photo;
-    addElement('p', teamMembers[i].name, teamMemberCard);
-    addElement('p', teamMembers[i].role, teamMemberCard);
+    addElement('h2', teamMembers[i].name, teamMemberCard);
+    addElement('span', teamMembers[i].role, teamMemberCard);
 }
 
 

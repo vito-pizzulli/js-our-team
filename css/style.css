@@ -1,0 +1,59 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f5f5f1;
+}
+
+div.title {
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+div.title > h1 {
+    text-transform: uppercase;
+}
+
+div.title > h1,
+div.title > p {
+    margin-bottom: 1rem;
+}
+
+div.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+div.card-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div.card-wrapper > div.card > img {
+    width: 100%;
+}
+
+div.card-wrapper > div.card {
+    width: calc(100% / 3) - 1rem;
+    background-color: white;
+    margin: 1rem;
+    padding-bottom: 1.2rem;
+}
+
+div.card-wrapper > div.card > h2 {
+    font-family: "Times New Roman", Times, serif;
+    padding: .7rem;
+}
+
+div.card-wrapper > div.card > h2,
+div.card-wrapper > div.card > span {
+    color: grey;
+}
