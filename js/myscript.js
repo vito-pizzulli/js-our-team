@@ -1,4 +1,4 @@
-const container = document.querySelector('div.container');
+const container = document.querySelector('div.card-wrapper');
 const teamMembers = [
     {
         name: 'Wayne Barnett',
@@ -36,7 +36,7 @@ for (let i = 0; i < teamMembers.length; i++) {
     
     const teamMemberCard = addElement('div', '', container);
     teamMemberCard.classList.add('card');
-    addElement('p', `<img src = "img/${teamMembers[i].photo}">`, teamMemberCard);
+    addElement('img', '', teamMemberCard).src = 'img/' + teamMembers[i].photo;
     addElement('p', teamMembers[i].name, teamMemberCard);
     addElement('p', teamMembers[i].role, teamMemberCard);
     addElement('hr', '', container);
