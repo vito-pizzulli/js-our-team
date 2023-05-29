@@ -1,3 +1,4 @@
+const container = document.querySelector('div.container');
 const teamMembers = [
     {
         name: 'Wayne Barnett',
@@ -32,8 +33,26 @@ const teamMembers = [
 ];
 
 for (let i = 0; i < teamMembers.length; i++) {
-    console.log('Name: ' + teamMembers[i].name);
-    console.log('Role: ' + teamMembers[i].role);
-    console.log('Photo: ' + teamMembers[i].photo);
-    console.log('----------');
+
+    const teamMemberCard = addElement('div', '', container);
+    addElement('p', teamMembers[i].name, teamMemberCard);
+    addElement('p', teamMembers[i].role, teamMemberCard);
+    addElement('p', teamMembers[i].photo, teamMemberCard);
+    addElement('hr', '', container);
+}
+
+
+/* FUNCTIONS */
+
+/**
+ * This function creates an html element of the chosen type and class, with the chosen text, and adds it at the end of the selected container.
+ * @param {*} type The type of html element that will be created. 
+ * @param {*} innerText The text that the created element will have inside.
+ * @param {*} container The container at the end of which the element will be added.
+ */
+function addElement(type, innerText, container) {
+    type = document.createElement(type);
+    type.innerHTML = innerText;
+    container.append(type);
+    return type;
 }
