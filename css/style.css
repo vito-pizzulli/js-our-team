@@ -13,8 +13,9 @@ main {
     overflow-y: auto;
 }
 
+
+
 div.title {
-    width: 50%;
     margin: 0 auto;
     padding: 2rem;
 }
@@ -29,7 +30,6 @@ div.title > p {
 }
 
 div.container {
-    width: 75%;
     margin: 0 auto;
 }
 
@@ -48,7 +48,6 @@ div.card-wrapper > div.card > img {
 }
 
 div.card-wrapper > div.card {
-    width: calc(100% / 3 - 2rem);
     background-color: white;
     margin: 1rem;
     padding-bottom: 1.2rem;
@@ -68,14 +67,25 @@ div.card-wrapper > div.card > span {
 
 /* Responsive Layouts */
 
-/* XS Layout (from 0px to 576px */
-@media screen and (max-width: 576px) {
-    div.title {
-        width: 100%;
+/* SM-MD Layout (from 576px to 991px*/
+@media screen and (min-width: 576px) {
+    div.container {
+        width: 75%;
     }
 
-    div.container {
-        width: 100%;
+    div.title {
+        width: 50%;
+    }
+    
+    div.card-wrapper > div.card {
+        width: calc(100% / 2 - 2rem);
+    }
+}
+
+/* LG-XL-XXL Layout (from 992px to 2559px*/
+@media screen and (min-width: 992px) {
+    div.card-wrapper > div.card {
+        width: calc(100% / 3 - 2rem);
     }
 }
 
