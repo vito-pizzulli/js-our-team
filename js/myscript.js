@@ -39,7 +39,6 @@ for (let i = 0; i < teamMembers.length; i++) {
     addElement('img', '', teamMemberCard).src = 'img/' + teamMembers[i].photo;
     addElement('p', teamMembers[i].name, teamMemberCard);
     addElement('p', teamMembers[i].role, teamMemberCard);
-    addElement('hr', '', container);
 }
 
 
