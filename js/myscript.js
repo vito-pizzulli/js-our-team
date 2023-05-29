@@ -33,11 +33,12 @@ const teamMembers = [
 ];
 
 for (let i = 0; i < teamMembers.length; i++) {
-
+    
     const teamMemberCard = addElement('div', '', container);
+    teamMemberCard.classList.add('card');
+    addElement('p', `<img src = "img/${teamMembers[i].photo}">`, teamMemberCard);
     addElement('p', teamMembers[i].name, teamMemberCard);
     addElement('p', teamMembers[i].role, teamMemberCard);
-    addElement('p', teamMembers[i].photo, teamMemberCard);
     addElement('hr', '', container);
 }
 
@@ -55,4 +56,15 @@ function addElement(type, innerText, container) {
     type.innerHTML = innerText;
     container.append(type);
     return type;
+}
+
+/**
+ * This function generates an image at the end of the chosen container.
+ * @param {*} source The source of the image.
+ * @param {*} container The container at the end of which the image will be generated.
+ */
+function imageGenerator(source, container) {
+    const image = document.createElement('img');
+        image.src = source;
+        container.append(image);
 }
